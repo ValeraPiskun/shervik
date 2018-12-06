@@ -11,7 +11,7 @@ with open('orders.csv',encoding='utf-8') as f:
         else:
             d[key[0]]=[key[1:]]
             print(d[key[0]])
-for i in d:
+'''for i in d:
     newk=dict()
     for f in d[i]:
         if f[0] in newk:
@@ -22,5 +22,22 @@ for i in d:
             print(newk[f[0]])
     print(newk)
     d[i]=newk
-print(d)
+print(d)'''
 def qwe(d):
+    for i in d:
+        newk = dict()
+        for f in d[i]:
+            if f[0] in newk:
+                newk[f[0]].append(f[1:])
+                #print(newk[f[0]])
+            else:
+                newk[f[0]] = [f[1:]]
+                #print(newk[f[0]])
+        '''print(newk)'''
+        d[i] = newk
+print(d)
+qwe(d)
+print(d)
+for r in d:
+    qwe(d[r])
+print(d)
